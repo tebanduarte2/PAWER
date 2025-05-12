@@ -1,0 +1,81 @@
+/* Fuente general */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #b77cd7; /* Morado claro de fondo */
+    color: #443e7c;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #443e7c !important; /* Morado oscuro */
+    padding: 15px 0;
+}
+
+header h1 {
+    color: #ffb246; /* Amarillo */
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.nav .nav-link {
+    color: black !important;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav .nav-link:hover {
+    color: #ffb246 !important; /* Amarillo */
+}
+
+/* Main Content */
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Catálogo de Mascotas */
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1.text-primary {
+    color: #443e7c !important; /* Morado oscuro */
+}
+
+.card {
+    border: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    color: #443e7c;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.list-group-item {
+    background-color: #f8f9fa;
+    border: none;
+}
+
+/* Footer */
+footer {
+    background-color: #443e7c;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}

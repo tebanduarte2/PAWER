@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container my-5">
+    <h1 class="text-center text-warning fw-bold">Modificar Mascota</h1>
+
+    <form method="POST" class="mt-4">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="mb-3">
+                    {{ form.name.label_tag }}
+                    {{ form.name }}
+                </div>
+                <div class="mb-3">
+                    {{ form.species.label_tag }}
+                    {{ form.species }}
+                </div>
+                <div class="mb-3">
+                    {{ form.age.label_tag }}
+                    {{ form.age }}
+                </div>
+                <div class="mb-3">
+                    {{ form.size.label_tag }}
+                    {{ form.size }}
+                </div>
+                <div class="mb-3">
+                    {{ form.gender.label_tag }}
+                    {{ form.gender }}
+                </div>
+                <div class="mb-3">
+                    {{ form.space_required.label_tag }}
+                    {{ form.space_required }}
+                </div>
+                <div class="mb-3">
+                    {{ form.description.label_tag }}
+                    {{ form.description }}
+                </div>
+                <div class="mb-3">
+                    {{ form.compatibility.label_tag }}
+                    {{ form.compatibility }}
+                </div>
+                <div class="mb-3">
+                    {{ form.pet_lever.label_tag }}
+                    {{ form.pet_lever }}
+                </div>
+                <button type="submit" class="btn btn-success w-100">Guardar Cambios</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

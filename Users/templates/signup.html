@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <h2>Registrarse</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            {{ form.username.label_tag }}
+            {{ form.username }}
+        </div>
+        <div class="mb-3">
+            {{ form.name.label_tag }}
+            {{ form.name }}
+        </div>
+        <div class="mb-3">
+            {{ form.address.label_tag }}
+            {{ form.address }}
+        </div>
+        <div class="mb-3">
+            {{ form.cellphone.label_tag }}
+            {{ form.cellphone }}
+        </div>
+        <div class="mb-3">
+            {{ form.password1.label_tag }}
+            {{ form.password1 }}
+        </div>
+        <div class="mb-3">
+            {{ form.password2.label_tag }}
+            {{ form.password2 }}
+        </div>
+        {% if form.errors %}
+            <div class="alert alert-danger">
+                {{ form.non_field_errors }}
+            </div>
+        {% endif %}
+        <button type="submit" class="btn btn-primary">Registrarse</button>
+    </form>
+</div>
+{% endblock %}

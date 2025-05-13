@@ -10,7 +10,7 @@ class PetForm(forms.ModelForm):
     
     class Meta:
         model = Pet
-        fields = ['name', 'species', 'age', 'size', 'gender', 'space_required', 'description']
+        fields = ['name', 'species', 'age', 'size', 'gender', 'space_required', 'description','image']
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'}),
             'species': forms.TextInput(attrs={'class': 'form-control'}),

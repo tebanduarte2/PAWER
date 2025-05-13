@@ -3,9 +3,17 @@
 {% block content %}
 <div class="container my-5">
     <h1 class="text-center text-primary fw-bold">{{ pet.name }}</h1>
-    
+
     <div class="card shadow-lg p-4">
         <h2 class="text-secondary">Información de la Mascota</h2>
+        {% if pet.image %} <div class="text-center mb-4">
+                <img src="{{ pet.image.url }}" alt="{{ pet.name }}" class="img-fluid rounded" style="max-height: 300px;">
+            </div>
+        {% else %}
+            <div class="text-center mb-4">
+                <img src="/static/placeholder.png" alt="No image available" class="img-fluid rounded" style="max-height: 300px;">
+            </div>
+        {% endif %}
         <ul class="list-group list-group-flush">
             <li class="list-group-item"><strong>Edad:</strong> {{ pet.age }} años</li>
             <li class="list-group-item"><strong>Raza:</strong> {{ pet.species }}</li>

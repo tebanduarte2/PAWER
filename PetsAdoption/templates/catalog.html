@@ -4,7 +4,6 @@
 <div class="container my-5">
     <h1 class="text-center text-primary fw-bold">Catálogo de Mascotas</h1>
 
-    <!-- Formulario de Búsqueda y Filtros -->
     <form method="GET" class="mb-4">
         <div class="row g-2">
             <div class="col-md-3">
@@ -30,7 +29,6 @@
         </div>
     </form>
 
-    <!-- Lista de mascotas -->
     <div class="row">
         {% for pet in pets %}
             <div class="col-md-4 mb-4">
@@ -41,8 +39,11 @@
                                 {{ pet.name }}
                             </a>
                         </h2>
-                        <div>   
-                             <img src="{{ pet.image }}" alt="{{ pet.name }}" class="img-fluid rounded mb-2">
+                        <div>
+                             {% if pet.image %} <img src="{{ pet.image.url }}" alt="{{ pet.name }}" class="img-fluid rounded mb-2">
+                             {% else %}
+                                 <img src="/static/placeholder.png" alt="No image available" class="img-fluid rounded mb-2">
+                             {% endif %}
                         </div>
                         <p class="card-text">{{ pet.description }}</p>
                         <ul class="list-group list-group-flush">

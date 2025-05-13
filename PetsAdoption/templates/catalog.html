@@ -1,30 +1,31 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block content %}
 <div class="container my-5">
-    <h1 class="text-center text-primary fw-bold">Catálogo de Mascotas</h1>
+    <h1 class="text-center text-primary fw-bold">{% trans "Catálogo de Mascotas" %}</h1>{# Marked the heading #}
 
     <form method="GET" class="mb-4">
         <div class="row g-2">
             <div class="col-md-3">
-                <input type="text" name="q" class="form-control" placeholder="Buscar por nombre o descripción" value="{{ request.GET.q }}">
+                <input type="text" name="q" class="form-control" placeholder="{% trans "Buscar por nombre o descripción" %}" value="{{ request.GET.q }}">
             </div>
             <div class="col-md-3">
                 <select name="species" class="form-select">
-                    <option value="">Filtrar por especie</option>
+                    <option value="">{% trans "Filtrar por especie" %}</option>
                     <option value="Perro" {% if request.GET.species == "Perro" %}selected{% endif %}>Perro</option>
                     <option value="Gato" {% if request.GET.species == "Gato" %}selected{% endif %}>Gato</option>
                     <option value="Ave" {% if request.GET.species == "Ave" %}selected{% endif %}>Ave</option>
                 </select>
             </div>
             <div class="col-md-2">
-                <input type="number" name="size_min" class="form-control" placeholder="Tamaño mín." min="1" max="50" value="{{ request.GET.size_min }}">
+                <input type="number" name="size_min" class="form-control" placeholder="{% trans "Tamaño mínimo" %}" min="1" max="50" value="{{ request.GET.size_min }}">
             </div>
             <div class="col-md-2">
-                <input type="number" name="size_max" class="form-control" placeholder="Tamaño máx." min="1" max="50" value="{{ request.GET.size_max }}">
+                <input type="number" name="size_max" class="form-control" placeholder="{% trans "Tamaño máximo" %}" min="1" max="50" value="{{ request.GET.size_max }}">
             </div>
             <div class="col-md-2">
-                <button type="submit" class="btn btn-primary w-100">Buscar</button>
+                <button type="submit" class="btn btn-primary w-100">{% trans "Buscar" %}</button>
             </div>
         </div>
     </form>
@@ -47,19 +48,19 @@
                         </div>
                         <p class="card-text">{{ pet.description }}</p>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><strong>Edad:</strong> {{ pet.age }} años</li>
-                            <li class="list-group-item"><strong>Raza:</strong> {{ pet.species }}</li>
-                            <li class="list-group-item"><strong>Tamaño:</strong> {{ pet.size }} cm</li>
-                            <li class="list-group-item"><strong>Género:</strong> {{ pet.gender }}</li>
+                            <li class="list-group-item"><strong>{% trans "Edad:" %}</strong> {{ pet.age }} años</li>
+                            <li class="list-group-item"><strong>{% trans "Raza:" %}</strong> {{ pet.species }}</li>
+                            <li class="list-group-item"><strong>{% trans "Tamaño:" %}</strong> {{ pet.size }} cm</li>
+                            <li class="list-group-item"><strong>{% trans "Género:" %}</strong> {{ pet.gender }}</li>
                         </ul>
                         <div class="text-center mt-3">
-                            <a href="{% url 'pet_detail' pet.id %}" class="btn btn-outline-primary">Ver Detalles</a>
+                            <a href="{% url 'pet_detail' pet.id %}" class="btn btn-outline-primary">{% trans "Ver Detalles" %}</a>
                         </div>
                     </div>
                 </div>
             </div>
         {% empty %}
-            <p class="text-center">No hay mascotas disponibles en este momento.</p>
+            <p class="text-center">{% trans "No hay mascotas disponibles en este momento." %}</p>
         {% endfor %}
     </div>
 </div>

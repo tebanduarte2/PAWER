@@ -1,13 +1,15 @@
 {% extends "base.html" %}
+{% load i18n %} {# Add this line #}
 
 {% block content %}
 <div class="container my-5">
-    <h1 class="text-center text-primary fw-bold">Agregar Nueva Mascota</h1>
+    <h1 class="text-center text-primary fw-bold">{% trans "Agregar Nueva Mascota" %}</h1>{# Marked the heading #}
 
     <form method="POST" class="mt-4" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="row">
             <div class="col-md-6 mx-auto">
+                {# Form fields - labels and help text are translated in forms.py #}
                 <div class="mb-3">
                     {{ form.name.label_tag }}
                     {{ form.name }}
@@ -28,8 +30,9 @@
                     {{ form.gender.label_tag }}
                     {{ form.gender }}
                 </div>
+                {# Hardcoded label before the form field #}
                 <div class="mb-3">
-                    Espacio Requerido para la Mascota
+                    {% trans "Espacio Requerido para la Mascota" %} {# Marked the label #}
                     {{ form.space_required }}
                 </div>
                 <div class="mb-3">
@@ -40,7 +43,7 @@
                     {{ form.image.label_tag }}
                     {{ form.image }}
                 </div>
-                <button type="submit" class="btn btn-success w-100">Guardar Mascota</button>
+                <button type="submit" class="btn btn-success w-100">{% trans "Guardar Mascota" %}</button>{# Marked the button text #}
             </div>
         </div>
     </form>

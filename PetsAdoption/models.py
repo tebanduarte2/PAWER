@@ -1,12 +1,26 @@
 from django.db import models
 from Users.models import PetLever
+from django.utils.translation import gettext_lazy as _ 
 
 class Pet(models.Model):
     name = models.CharField(max_length=100)
-    species = models.CharField(max_length=50)
+    SPECIES_CHOICES = [
+        ('PERRO', _('Perro')),
+        ('GATO', _('Gato')),
+        ('AVE', _('Ave')),
+        ('CONEJO', _('Conejo')),
+        ('HAMSTER', _('Hamster')),
+        ('OTRO', _('Otro')),
+    ]
+    species = models.CharField(max_length=50, choices=SPECIES_CHOICES)
     age = models.IntegerField()
     size = models.CharField(max_length=20)
-    gender = models.CharField(max_length=20)
+    GENDER_CHOICES = [
+        ('MASCULINO', _('Masculino')),
+        ('FEMENINO', _('Femenino')),
+        ('DESCONOCIDO', _('Desconocido')),
+    ]
+    gender = models.CharField(max_length=20, choices=GENDER_CHOICES) 
     space_required = models.TextField()
     description = models.TextField()
     avilability = models.BooleanField(default=True)

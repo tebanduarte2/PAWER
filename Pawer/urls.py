@@ -34,6 +34,7 @@ urlpatterns += i18n_patterns(
     path("", views.base_view, name="inicio"),
     path("PetsAdoption/", include("PetsAdoption.urls"), name="PetsAdoption"),
     path("Users/", include("Users.urls")),
+    path('contact/', views.contact_view, name='contact'),
     prefix_default_language=True
 )
 

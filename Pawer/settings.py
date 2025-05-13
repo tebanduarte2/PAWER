@@ -140,3 +140,5 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 LOCALE_PATHS = [
     BASE_DIR / 'locale',
 ]
+
+LOCATIONIQ_API_KEY = os.environ.get('LOCATIONIQ_API_KEY', 'pk.802691ed6967edbdf9fecbbb323071b4')

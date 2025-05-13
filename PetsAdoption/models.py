@@ -9,14 +9,15 @@ class Pet(models.Model):
     gender = models.CharField(max_length=20)
     space_required = models.TextField()
     description = models.TextField()
-    compatibility = models.TextField()
     avilability = models.BooleanField(default=True)
     pet_lever = models.ForeignKey(PetLever, on_delete=models.CASCADE, related_name='pets', null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         return self.name
+
 
 class Product(models.Model):
     name = models.CharField(max_length=100)

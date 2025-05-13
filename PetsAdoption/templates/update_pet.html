@@ -4,7 +4,7 @@
 <div class="container my-5">
     <h1 class="text-center text-warning fw-bold">Modificar Mascota</h1>
 
-    <form method="POST" class="mt-4">
+    <form method="POST" class="mt-4" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="row">
             <div class="col-md-6 mx-auto">
@@ -37,8 +37,8 @@
                     {{ form.description }}
                 </div>
                 <div class="mb-3">
-                    {{ form.compatibility.label_tag }}
-                    {{ form.compatibility }}
+                    {{ form.image.label_tag }}
+                    {{ form.image }}
                 </div>
                 <div class="mb-3">
                     {{ form.pet_lever.label_tag }}

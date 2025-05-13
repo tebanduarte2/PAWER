@@ -2,6 +2,12 @@ from django import forms
 from .models import Pet
 
 class PetForm(forms.ModelForm):
+    image = forms.ImageField(
+        label='Image',
+        required=False, 
+        widget=forms.FileInput(attrs={'class': 'form-control'})
+    )
+    
     class Meta:
         model = Pet
         fields = ['name', 'species', 'age', 'size', 'gender', 'space_required', 'description']

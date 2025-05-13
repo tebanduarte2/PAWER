@@ -41,6 +41,9 @@
                                 {{ pet.name }}
                             </a>
                         </h2>
+                        <div>   
+                             <img src="{{ pet.image }}" alt="{{ pet.name }}" class="img-fluid rounded mb-2">
+                        </div>
                         <p class="card-text">{{ pet.description }}</p>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item"><strong>Edad:</strong> {{ pet.age }} años</li>

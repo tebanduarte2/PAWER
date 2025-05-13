@@ -1,20 +1,21 @@
-# Usa una imagen oficial de Python
+# Usa una imagen ligera de Python
 FROM python:3.11-slim
 
-# Establece el directorio de trabajo
+# Establece directorio de trabajo
 WORKDIR /app
 
-# Copia los archivos de requisitos
+# Copia dependencias e instálalas
 COPY requirements.txt .
-
-# Instala dependencias
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copia el resto del código del proyecto
+# Copia todo el proyecto
 COPY . .
+
+# Recoge archivos estáticos
+RUN python manage.py collectstatic --noinput
 
 # Expón el puerto 8000
 EXPOSE 8000
 
-# Comando para ejecutar gunicorn con Django
+# Ejecuta la app con gunicorn (usa whitenoise para estáticos)
 CMD ["gunicorn", "Pawer.wsgi:application", "--bind", "0.0.0.0:8000"]

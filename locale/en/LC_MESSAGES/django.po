@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-13 22:05+0000\n"
+"POT-Creation-Date: 2025-05-14 01:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,6 +25,11 @@ msgstr "English"
 #: Pawer/settings.py:120
 msgid "Español"
 msgstr "Spanish"
+
+#: PetsAdoption/forms.py:7
+#: venv/lib/python3.13/site-packages/django/db/models/fields/files.py:420
+msgid "Image"
+msgstr "Image"
 
 #: PetsAdoption/models.py:8
 msgid "Perro"
@@ -87,18 +92,22 @@ msgid "Buscar"
 msgstr "Search"
 
 #: PetsAdoption/templates/catalog.html:51
+#: PetsAdoption/templates/detail_pet.html:19
 msgid "Edad:"
 msgstr "Age:"
 
 #: PetsAdoption/templates/catalog.html:52
+#: PetsAdoption/templates/detail_pet.html:20
 msgid "Raza:"
 msgstr "Breed:"
 
 #: PetsAdoption/templates/catalog.html:53
+#: PetsAdoption/templates/detail_pet.html:21
 msgid "Tamaño:"
-msgstr "Size"
+msgstr "Size:"
 
 #: PetsAdoption/templates/catalog.html:54
+#: PetsAdoption/templates/detail_pet.html:22
 msgid "Género:"
 msgstr "Gender:"
 
@@ -109,6 +118,34 @@ msgstr "View Details"
 #: PetsAdoption/templates/catalog.html:63
 msgid "No hay mascotas disponibles en este momento."
 msgstr "There are no pets available right now"
+
+#: PetsAdoption/templates/create_pet.html:6
+msgid "Agregar nueva mascota"
+msgstr "Add a new pet"
+
+#: PetsAdoption/templates/create_pet.html:35
+msgid "Espacio Requerido para la Mascota:"
+msgstr "Space required for the pet:"
+
+#: PetsAdoption/templates/create_pet.html:46
+msgid "Guardar Mascota"
+msgstr "Save Pet"
+
+#: PetsAdoption/templates/detail_pet.html:9
+msgid "Información de la Mascota"
+msgstr "Pet Information"
+
+#: PetsAdoption/templates/detail_pet.html:19
+msgid "año(s)"
+msgstr "year(s)"
+
+#: PetsAdoption/templates/detail_pet.html:23
+msgid "Espacio requerido:"
+msgstr "Space required for the pet:"
+
+#: PetsAdoption/templates/detail_pet.html:24
+msgid "Descripción:"
+msgstr "Description:"
 
 #: templates/base.html:18
 msgid "Inicio"
@@ -535,10 +572,6 @@ msgstr ""
 
 #: venv/lib/python3.13/site-packages/django/db/models/fields/files.py:244
 msgid "File"
-msgstr ""
-
-#: venv/lib/python3.13/site-packages/django/db/models/fields/files.py:420
-msgid "Image"
 msgstr ""
 
 #: venv/lib/python3.13/site-packages/django/db/models/fields/json.py:24

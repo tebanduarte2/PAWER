@@ -3,29 +3,29 @@
 
 {% block content %}
 <div class="container my-5">
-    <h1 class="text-center text-primary fw-bold">Contáctanos</h1>
+    <h1 class="text-center text-primary fw-bold">{% trans "Contáctanos" %}</h1>
 
     <div class="row">
         <div class="col-md-8 mx-auto">
-            <p>Puedes usar el buscador a continuación para encontrar direcciones:</p>
+            <p>{% trans "Puedes usar el buscador a continuación para encontrar direcciones:" %}</p>
 
             <form method="GET" class="mb-4">
                 <div class="input-group">
-                    <input type="text" name="address_query" class="form-control" placeholder="Ingresa una dirección para buscar" value="{{ query }}">
-                    <button class="btn btn-primary" type="submit">Buscar</button>
+                    <input type="text" name="address_query" class="form-control" placeholder="{% trans "Ingresa una dirección para buscar" %}" value="{{ query }}">
+                    <button class="btn btn-primary" type="submit">{% trans "Buscar" %}</button>
                 </div>
             </form>
 
             {% if query and search_results is None %}
-                <p class="text-danger">No se encontraron resultados para "{{ query }}".</p>
+                <p class="text-danger">{% trans "No se encontraron resultados para:" %} "{{ query }}".</p>
             {% elif search_results %}
-                <h2>Resultados de la búsqueda para "{{ query }}":</h2>
+                <h2>{% trans "Resultado de la búsqueda para:" %} "{{ query }}":</h2>
                 <ul class="list-group mb-4">
                     {% for result in search_results %}
                         <li class="list-group-item">
-                            <strong>Dirección:</strong> {{ result.display_name }}<br>
-                            <strong>Latitud:</strong> {{ result.lat }}<br>
-                            <strong>Longitud:</strong> {{ result.lon }}
+                            <strong>{% trans "Dirección:" %}</strong> {{ result.display_name }}<br>
+                            <strong>{% trans "Latitud:" %}</strong> {{ result.lat }}<br>
+                            <strong>{% trans "Longitud:" %}</strong> {{ result.lon }}
                         </li>
                     {% endfor %}
                 </ul>
@@ -37,10 +37,9 @@
     {# Add any other contact information here #}
     <div class="row mt-4">
         <div class="col-md-8 mx-auto">
-            <h3>Nuestra Información de Contacto</h3>
-            <p>Correo electrónico: info@yourwebsite.com</p>
-            <p>Teléfono: +123 456 7890</p>
-            {# Add address if you have one #}
+            <h3>{% trans "Nuestra Información de Contacto" %}</h3>
+            <p>{% trans "Correo electrónico: gmcalleh@eafit.edu.com" %}</p>
+            <p>{% trans "Teléfono: 322 204 6804" %}</p>
         </div>
     </div>
 

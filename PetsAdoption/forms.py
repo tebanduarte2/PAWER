@@ -4,7 +4,7 @@ from django.utils.translation import gettext_lazy as _
 
 class PetForm(forms.ModelForm):
     image = forms.ImageField(
-        label='Image',
+        label=_('Image'),
         required=False, 
         widget=forms.FileInput(attrs={'class': 'form-control'})
     )

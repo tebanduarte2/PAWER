@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="container my-5">
-    <h1 class="text-center text-primary fw-bold">{% trans "Agregar Nueva Mascota" %}</h1>{# Marked the heading #}
+    <h1 class="text-center text-primary fw-bold">{% trans "Agregar nueva mascota" %}</h1>{# Marked the heading #}
 
     <form method="POST" class="mt-4" enctype="multipart/form-data">
         {% csrf_token %}
@@ -32,7 +32,7 @@
                 </div>
                 {# Hardcoded label before the form field #}
                 <div class="mb-3">
-                    {% trans "Espacio Requerido para la Mascota" %} {# Marked the label #}
+                    {% trans "Espacio Requerido para la Mascota:" %} {# Marked the label #}
                     {{ form.space_required }}
                 </div>
                 <div class="mb-3">

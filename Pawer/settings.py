@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "Users",
     "PetsAdoption",
+    "API_Consumer",
     'rest_framework',
     'CompatibilityTest',
 ]

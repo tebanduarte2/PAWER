@@ -35,6 +35,7 @@ urlpatterns += i18n_patterns(
     path("Users/", include("Users.urls")),
     path('contact/', views.contact_view, name='contact'),
     path('compatibility/', include('CompatibilityTest.urls')),
+    path('consume-api/', include('API_Consumer.urls')),
     prefix_default_language=True
 )
 

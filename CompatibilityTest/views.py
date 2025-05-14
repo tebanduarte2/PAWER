@@ -95,7 +95,7 @@ def filter_pets(answers):
     elif tamaño_maximo == '50':
         filtro_tamaño = pets.filter(size__lte='50') 
     elif tamaño_maximo == '0':
-        filtro_tamaño = pets.filter(ize__gte='0')
+        filtro_tamaño = pets.filter(size__gte='0')
 
     ruido = answers.get('pregunta_ruido')
     if ruido == 'tolerante':
@@ -153,7 +153,7 @@ def filter_pets(answers):
     especificar_alergia = answers.get('especificar_alergia')
     filtro_alergia = False
     if alergia == 'si' and especificar_alergia:
-        filtro_alergia = pets.exclude(species__icontains=especificar_alergia.lower())
+        filtro_alergia = pets.exclude(species__icontains=especificar_alergia)
 
     puntuaciones = {
         'perro': puntos_perro,

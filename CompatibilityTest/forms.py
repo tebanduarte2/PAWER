@@ -24,7 +24,6 @@ class CompatibilityTestForm(forms.Form):
     GENDER_CHOICES = [
         ('MASCULINO', 'Masculino'),
         ('FEMENINO', 'Femenino'),
-        ('DESCONOCIDO', 'Desconocido'),
     ]
     SIZE_CHOICES = [
         ('30', 'Máximo 30 cm'),
@@ -40,6 +39,13 @@ class CompatibilityTestForm(forms.Form):
         ('poco', 'Poco tiempo y esfuerzo'),
         ('moderado', 'Tiempo y esfuerzo moderado'),
         ('mucho', 'Mucho tiempo y esfuerzo'),
+    ]
+    PREGUNTA_ALERGIA_CHOICES = [
+        ('perro', 'Perros'),
+        ('gato', 'Gatos'),
+        ('pajaro', 'Pajaros'),
+        ('hamster', 'Hamster'),
+        ('conejo', 'Conejo'),
     ]
     
     pregunta_personalidad = forms.ChoiceField(
@@ -97,10 +103,11 @@ class CompatibilityTestForm(forms.Form):
         choices=YES_NO_CHOICES,
         widget=forms.RadioSelect
     )
-    especificar_alergia = forms.CharField(
+    especificar_alergia = forms.ChoiceField(
         label='Especifica la alergia',
-        required=False,  
-        widget=forms.Textarea(attrs={'rows': 2}),
+        choices=PREGUNTA_ALERGIA_CHOICES,
+        required=False,
+        widget=forms.Select,
     )
     
     def clean(self):

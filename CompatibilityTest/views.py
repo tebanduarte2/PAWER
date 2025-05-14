@@ -164,8 +164,15 @@ def filter_pets(answers):
         'hamster': puntos_hamster,
         'conejo': puntos_conejo,
     }
+    
     mascota_compatible = max(puntuaciones, key=puntuaciones.get)
-
+    
+    if mascota_compatible == especificar_alergia and alergia == 'si':
+        puntuaciones.pop(mascota_compatible)
+        mascota_compatible = max(puntuaciones, key=puntuaciones.get)
+        
+    print(puntuaciones)
+    
     if filtro_alergia:
         compatible_pets = Pet.objects.filter(species__iexact=mascota_compatible) & filtro_tamaño & filtro_alergia & filtro_genero
     else:

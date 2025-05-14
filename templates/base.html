@@ -18,7 +18,7 @@
                     <li class="nav-item"><a class="nav-link text-dark" href="{% url 'inicio'%}">{% trans "Inicio" %}</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="{% url 'pet_catalog' %}">Adopción</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="#">Tienda</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="#">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="{% url 'pet_catalog' %}">Contacto</a></li>
                     {% if user.is_authenticated %}
                         <!-- Si el usuario ha iniciado sesión, mostrar Logout -->
                         <li class="nav-item">
@@ -34,6 +34,19 @@
                         <li class="nav-item"><a class="nav-link text-dark" href="{% url 'login' %}">Login</a></li>
                         <li class="nav-item"><a class="nav-link text-dark" href="{% url 'signup' %}">Signup</a></li>
                     {% endif %}
+                        <li class="nav-item"><form action="{% url 'set_language' %}" method="post" class="d-flex align-items-center ms-3">{% csrf_token %}
+                        <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}"> {# Adjust slicing based on your URL structure #}
+                        <select name="language" onchange="this.form.submit()">
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            {% for language in languages %}
+                            <option value="{{ language.code }}"{% if language.code == request.LANGUAGE_CODE %} selected{% endif %}>
+                            {{ language.name_local }} ({{ language.code }})
+                            </option>
+                        {% endfor %}
+    </select>
+</form></li>
+                     
                 </ul>
             </nav>
         </div>

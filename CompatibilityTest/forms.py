@@ -24,6 +24,7 @@ class CompatibilityTestForm(forms.Form):
     GENDER_CHOICES = [
         ('MASCULINO', 'Masculino'),
         ('FEMENINO', 'Femenino'),
+        ('DESCONOCIDO', 'Desconocido'),
     ]
     SIZE_CHOICES = [
         ('30', 'Máximo 30 cm'),
@@ -43,7 +44,7 @@ class CompatibilityTestForm(forms.Form):
     PREGUNTA_ALERGIA_CHOICES = [
         ('perro', 'Perros'),
         ('gato', 'Gatos'),
-        ('pajaro', 'Pajaros'),
+        ('ave', 'Aves'),
         ('hamster', 'Hamster'),
         ('conejo', 'Conejo'),
     ]

@@ -3,7 +3,7 @@ import requests
 from django.conf import settings
 
 def base_view(request):
-    return render(request, 'base.html')
+    return render(request, 'home.html')
 
 def search_address(address):
     """

@@ -24,6 +24,8 @@ def filter_pets(answers):
     puntos_hamster = 0
     puntos_conejo = 0
 
+    pets = Pet.objects.all()
+    
     personalidad = answers.get('pregunta_personalidad')
     if personalidad == 'tranquilo':
         puntos_gato += 2
@@ -87,9 +89,9 @@ def filter_pets(answers):
         puntos_conejo += 1
 
     genero = answers.get('pregunta_genero')
+    filtro_genero = pets.filter(gender=genero)
 
     tamaño_maximo = answers.get('pregunta_tamaño_maxima')
-    pets = Pet.objects.all()
     if tamaño_maximo == '30':
         filtro_tamaño = pets.filter(size__lte='30')
     elif tamaño_maximo == '50':
@@ -165,8 +167,8 @@ def filter_pets(answers):
     mascota_compatible = max(puntuaciones, key=puntuaciones.get)
 
     if filtro_alergia:
-        compatible_pets = Pet.objects.filter(species__iexact=mascota_compatible) & filtro_tamaño & filtro_alergia
+        compatible_pets = Pet.objects.filter(species__iexact=mascota_compatible) & filtro_tamaño & filtro_alergia & filtro_genero
     else:
-        compatible_pets = Pet.objects.filter(species__iexact=mascota_compatible) & filtro_tamaño
+        compatible_pets = Pet.objects.filter(species__iexact=mascota_compatible) & filtro_tamaño & filtro_genero
 
     return compatible_pets

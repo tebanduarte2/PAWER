@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block extra_css %}
+    <style>
+        .main-content {
+            background: transparent !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            max-width: 100% !important;
+        }
+
+        .button-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 30vh; /* Ajusta esta cantidad para subir o bajar el botón */
+        }
+
+        .compatibility-button {
+            background-color: #2cd7fd;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+
+        .compatibility-button:hover {
+            background-color: #20bde2;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="button-wrapper">
+        <a href="{% url 'compatibility_test' %}" class="compatibility-button">
+            {% trans "Realizar Test de Compatibilidad" %}
+        </a>
+    </div>
+{% endblock %}

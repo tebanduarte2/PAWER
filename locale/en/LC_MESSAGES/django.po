@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-13 22:05+0000\n"
+"POT-Creation-Date: 2025-05-14 03:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,6 +25,11 @@ msgstr "English"
 #: Pawer/settings.py:120
 msgid "Español"
 msgstr "Spanish"
+
+#: PetsAdoption/forms.py:7
+#: venv/lib/python3.13/site-packages/django/db/models/fields/files.py:420
+msgid "Image"
+msgstr "Image"
 
 #: PetsAdoption/models.py:8
 msgid "Perro"
@@ -82,23 +87,27 @@ msgstr "Minimum Size"
 msgid "Tamaño máximo"
 msgstr "Maximum Size"
 
-#: PetsAdoption/templates/catalog.html:28
+#: PetsAdoption/templates/catalog.html:28 templates/contact.html:15
 msgid "Buscar"
 msgstr "Search"
 
 #: PetsAdoption/templates/catalog.html:51
+#: PetsAdoption/templates/detail_pet.html:19
 msgid "Edad:"
 msgstr "Age:"
 
 #: PetsAdoption/templates/catalog.html:52
+#: PetsAdoption/templates/detail_pet.html:20
 msgid "Raza:"
 msgstr "Breed:"
 
 #: PetsAdoption/templates/catalog.html:53
+#: PetsAdoption/templates/detail_pet.html:21
 msgid "Tamaño:"
-msgstr "Size"
+msgstr "Size:"
 
 #: PetsAdoption/templates/catalog.html:54
+#: PetsAdoption/templates/detail_pet.html:22
 msgid "Género:"
 msgstr "Gender:"
 
@@ -110,9 +119,118 @@ msgstr "View Details"
 msgid "No hay mascotas disponibles en este momento."
 msgstr "There are no pets available right now"
 
+#: PetsAdoption/templates/create_pet.html:6
+msgid "Agregar nueva mascota"
+msgstr "Add a new pet"
+
+#: PetsAdoption/templates/create_pet.html:35
+msgid "Espacio Requerido para la Mascota:"
+msgstr "Space required for the pet:"
+
+#: PetsAdoption/templates/create_pet.html:46
+msgid "Guardar Mascota"
+msgstr "Save Pet"
+
+#: PetsAdoption/templates/detail_pet.html:9
+msgid "Información de la Mascota"
+msgstr "Pet Information"
+
+#: PetsAdoption/templates/detail_pet.html:19
+msgid "año(s)"
+msgstr "year(s)"
+
+#: PetsAdoption/templates/detail_pet.html:23
+msgid "Espacio requerido:"
+msgstr "Space required for the pet:"
+
+#: PetsAdoption/templates/detail_pet.html:24
+msgid "Descripción:"
+msgstr "Description:"
+
+#: PetsAdoption/templates/detail_pet.html:45
+msgid "Adóptame"
+msgstr "Adopt Me"
+
+#: Users/templates/login.html:6 Users/templates/login.html:17
+msgid "Iniciar Sesión"
+msgstr "Log In"
+
+#: Users/templates/login.html:10
+msgid "Usuario"
+msgstr "User"
+
+#: Users/templates/login.html:14
+msgid "Contraseña"
+msgstr "Password"
+
+#: Users/templates/signup.html:6 Users/templates/signup.html:38
+#: templates/base.html:34
+msgid "Registrarse"
+msgstr "Sign Up"
+
 #: templates/base.html:18
 msgid "Inicio"
 msgstr "Home"
+
+#: templates/base.html:19
+msgid "Adopción"
+msgstr "Adoption"
+
+#: templates/base.html:20
+msgid "Contacto"
+msgstr "Contact Us"
+
+#: templates/base.html:25
+msgid "Cerrar sesión"
+msgstr "Log Out"
+
+#: templates/base.html:33
+msgid "Iniciar sesión"
+msgstr "Log In"
+
+#: templates/contact.html:6
+msgid "Contáctanos"
+msgstr "Contact Us"
+
+#: templates/contact.html:10
+msgid "Puedes usar el buscador a continuación para encontrar direcciones:"
+msgstr "You can use the following search bar for finding addresses:"
+
+#: templates/contact.html:14
+msgid "Ingresa una dirección para buscar"
+msgstr "Type an address to search"
+
+#: templates/contact.html:20
+msgid "No se encontraron resultados para:"
+msgstr "No results found for:"
+
+#: templates/contact.html:22
+msgid "Resultado de la búsqueda para:"
+msgstr "Results for: "
+
+#: templates/contact.html:26
+msgid "Dirección:"
+msgstr "Description:"
+
+#: templates/contact.html:27
+msgid "Latitud:"
+msgstr "Latitude:"
+
+#: templates/contact.html:28
+msgid "Longitud:"
+msgstr "Longitude:"
+
+#: templates/contact.html:40
+msgid "Nuestra Información de Contacto"
+msgstr "Our Contact Information"
+
+#: templates/contact.html:41
+msgid "Correo electrónico: gmcalleh@eafit.edu.com"
+msgstr "Email: gmcalleh@eafit.edu.com"
+
+#: templates/contact.html:42
+msgid "Teléfono: 322 204 6804"
+msgstr "Phone: 322 204 6804"
 
 #: venv/lib/python3.13/site-packages/django/contrib/messages/apps.py:16
 msgid "Messages"
@@ -535,10 +653,6 @@ msgstr ""
 
 #: venv/lib/python3.13/site-packages/django/db/models/fields/files.py:244
 msgid "File"
-msgstr ""
-
-#: venv/lib/python3.13/site-packages/django/db/models/fields/files.py:420
-msgid "Image"
 msgstr ""
 
 #: venv/lib/python3.13/site-packages/django/db/models/fields/json.py:24

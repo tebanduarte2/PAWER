@@ -15,8 +15,8 @@ COPY . .
 # Recoge archivos estáticos
 RUN python manage.py collectstatic --noinput
 
-# Expón el puerto 8000
-EXPOSE 8000
+# Expón el puerto 80
+EXPOSE 80
 
 # Ejecuta la app con gunicorn (usa whitenoise para estáticos)
-CMD ["gunicorn", "Pawer.wsgi:application", "--bind", "0.0.0.0:8000"]
+CMD ["gunicorn", "Pawer.wsgi:application", "--bind", "0.0.0.0:80"]

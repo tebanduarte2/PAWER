@@ -32,9 +32,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "Users",
-    "Shopping",
     "PetsAdoption",
     'rest_framework',
+    'CompatibilityTest',
 ]
 
 MIDDLEWARE = [

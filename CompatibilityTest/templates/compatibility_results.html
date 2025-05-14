@@ -1,0 +1,17 @@
+{% extends "catalog.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="alert alert-info text-center" role="alert">
+        <h2 class="alert-heading fw-bold">{% trans "¡Hemos encontrado posibles compañeros para ti!" %}</h2>
+        <p class="mb-0">{% trans "Basándonos en tus respuestas, estas son las mascotas que podrían ser tu nuevo compañero." %}</p>
+    </div>
+
+    {# El resto del contenido del catálogo se hereda de PetsAdoption/catalog.html #}
+    {# La variable 'pets' que pasaste desde tu vista CompatibilityTest.compatibility_test #}
+    {# estará disponible aquí y se utilizará en el bucle for del template padre. #}
+
+    {{ block.super }} {# Incluye el contenido del bloque 'content' del template padre #}
+</div>
+{% endblock %}

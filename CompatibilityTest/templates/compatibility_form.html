@@ -1,0 +1,206 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="container my-5">
+    <h1 class="text-center text-primary fw-bold">{% trans "Test de Compatibilidad de Mascotas" %}</h1>
+
+    <form method="POST" class="mt-4">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="mb-3">
+                    {{ form.pregunta_personalidad.label_tag }}
+                    {{ form.pregunta_personalidad }}
+                    {% if form.pregunta_personalidad.errors %}
+                        <div class="alert alert-danger mt-2">
+                            {% for error in form.pregunta_personalidad.errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                    {% if form.pregunta_personalidad.help_text %}
+                        <small class="form-text text-muted">{{ form.pregunta_personalidad.help_text }}</small>
+                    {% endif %}
+                </div>
+                <div class="mb-3">
+                    {{ form.pregunta_espacio.label_tag }}
+                    {{ form.pregunta_espacio }}
+                    {% if form.pregunta_espacio.errors %}
+                        <div class="alert alert-danger mt-2">
+                            {% for error in form.pregunta_espacio.errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                    {% if form.pregunta_espacio.help_text %}
+                        <small class="form-text text-muted">{{ form.pregunta_espacio.help_text }}</small>
+                    {% endif %}
+                </div>
+                <div class="mb-3">
+                    {{ form.pregunta_tiempo.label_tag }}
+                    {{ form.pregunta_tiempo }}
+                    {% if form.pregunta_tiempo.errors %}
+                        <div class="alert alert-danger mt-2">
+                            {% for error in form.pregunta_tiempo.errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                    {% if form.pregunta_tiempo.help_text %}
+                        <small class="form-text text-muted">{{ form.pregunta_tiempo.help_text }}</small>
+                    {% endif %}
+                </div>
+                <div class="mb-3">
+                    {{ form.pregunta_otros_animales.label_tag }}
+                    {{ form.pregunta_otros_animales }}
+                    {% if form.pregunta_otros_animales.errors %}
+                        <div class="alert alert-danger mt-2">
+                            {% for error in form.pregunta_otros_animales.errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                    {% if form.pregunta_otros_animales.help_text %}
+                        <small class="form-text text-muted">{{ form.pregunta_otros_animales.help_text }}</small>
+                    {% endif %}
+                </div>
+                <div class="mb-3">
+                    {{ form.pregunta_genero.label_tag }}
+                    {{ form.pregunta_genero }}
+                    {% if form.pregunta_genero.errors %}
+                        <div class="alert alert-danger mt-2">
+                            {% for error in form.pregunta_genero.errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                    {% if form.pregunta_genero.help_text %}
+                        <small class="form-text text-muted">{{ form.pregunta_genero.help_text }}</small>
+                    {% endif %}
+                </div>
+                <div class="mb-3">
+                    {{ form.pregunta_tamaño_maxima.label_tag }}
+                    {{ form.pregunta_tamaño_maxima }}
+                    {% if form.pregunta_tamaño_maxima.errors %}
+                        <div class="alert alert-danger mt-2">
+                            {% for error in form.pregunta_tamaño_maxima.errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                    {% if form.pregunta_tamaño_maxima.help_text %}
+                        <small class="form-text text-muted">{{ form.pregunta_tamaño_maxima.help_text }}</small>
+                    {% endif %}
+                </div>
+                <div class="mb-3">
+                    {{ form.pregunta_ruido.label_tag }}
+                    {{ form.pregunta_ruido }}
+                    {% if form.pregunta_ruido.errors %}
+                        <div class="alert alert-danger mt-2">
+                            {% for error in form.pregunta_ruido.errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                    {% if form.pregunta_ruido.help_text %}
+                        <small class="form-text text-muted">{{ form.pregunta_ruido.help_text }}</small>
+                    {% endif %}
+                </div>
+                <div class="mb-3">
+                    {{ form.pregunta_niños.label_tag }}
+                    {{ form.pregunta_niños }}
+                    {% if form.pregunta_niños.errors %}
+                        <div class="alert alert-danger mt-2">
+                            {% for error in form.pregunta_niños.errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                    {% if form.pregunta_niños.help_text %}
+                        <small class="form-text text-muted">{{ form.pregunta_niños.help_text }}</small>
+                    {% endif %}
+                </div>
+                <div class="mb-3">
+                    {{ form.pregunta_cuidados.label_tag }}
+                    {{ form.pregunta_cuidados }}
+                    {% if form.pregunta_cuidados.errors %}
+                        <div class="alert alert-danger mt-2">
+                            {% for error in form.pregunta_cuidados.errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                    {% if form.pregunta_cuidados.help_text %}
+                        <small class="form-text text-muted">{{ form.pregunta_cuidados.help_text }}</small>
+                    {% endif %}
+                </div>
+                <div class="mb-3">
+                    {{ form.pregunta_dieta.label_tag }}
+                    {{ form.pregunta_dieta }}
+                    {% if form.pregunta_dieta.errors %}
+                        <div class="alert alert-danger mt-2">
+                            {% for error in form.pregunta_dieta.errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                    {% if form.pregunta_dieta.help_text %}
+                        <small class="form-text text-muted">{{ form.pregunta_dieta.help_text }}</small>
+                    {% endif %}
+                </div>
+                <div class="mb-3">
+                    {{ form.pregunta_alergia.label_tag }}
+                    {{ form.pregunta_alergia }}
+                    {% if form.pregunta_alergia.errors %}
+                        <div class="alert alert-danger mt-2">
+                            {% for error in form.pregunta_alergia.errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                    {% if form.pregunta_alergia.help_text %}
+                        <small class="form-text text-muted">{{ form.pregunta_alergia.help_text }}</small>
+                    {% endif %}
+                </div>
+                <div class="mb-3" id="div_id_especificar_alergia">
+                    {{ form.especificar_alergia.label_tag }}
+                    {{ form.especificar_alergia }}
+                    {% if form.especificar_alergia.errors %}
+                        <div class="alert alert-danger mt-2">
+                            {% for error in form.especificar_alergia.errors %}
+                                {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                    {% if form.especificar_alergia.help_text %}
+                        <small class="form-text text-muted">{{ form.especificar_alergia.help_text }}</small>
+                    {% endif %}
+                </div>
+                <button type="submit" class="btn btn-primary w-100">{% trans "Ver Mascotas Compatibles" %}</button>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tieneAlergiaRadios = document.querySelectorAll('input[name="pregunta_alergia"]');
+            const especificarAlergiaDiv = document.querySelector('#div_id_especificar_alergia');
+
+            function toggleEspecificarAlergia() {
+                if (document.querySelector('input[name="pregunta_alergia"]:checked').value === 'si') {
+                    especificarAlergiaDiv.style.display = 'block';
+                } else {
+                    especificarAlergiaDiv.style.display = 'none';
+                }
+            }
+
+            tieneAlergiaRadios.forEach(radio => {
+                radio.addEventListener('change', toggleEspecificarAlergia);
+            });
+
+            toggleEspecificarAlergia(); // Initial state on page load
+        });
+    </script>
+</div>
+{% endblock %}

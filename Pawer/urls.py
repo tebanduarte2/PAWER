@@ -24,7 +24,6 @@ from django.conf.urls.i18n import i18n_patterns
 urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
     path('admin/', admin.site.urls),
-    #path("Shopping/", include("Shopping.urls")),
 ]
 
 if settings.DEBUG:
@@ -35,6 +34,7 @@ urlpatterns += i18n_patterns(
     path("PetsAdoption/", include("PetsAdoption.urls"), name="PetsAdoption"),
     path("Users/", include("Users.urls")),
     path('contact/', views.contact_view, name='contact'),
+    path('compatibility/', include('CompatibilityTest.urls')),
     prefix_default_language=True
 )
 

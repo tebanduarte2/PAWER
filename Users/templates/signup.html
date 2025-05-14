@@ -1,7 +1,9 @@
 {% extends "base.html" %}
+{% load i18n %}
+
 {% block content %}
 <div class="container mt-5">
-    <h2>Registrarse</h2>
+    <h2>{% trans "Registrarse" %}</h2>
     <form method="post">
         {% csrf_token %}
         <div class="mb-3">
@@ -33,7 +35,7 @@
                 {{ form.non_field_errors }}
             </div>
         {% endif %}
-        <button type="submit" class="btn btn-primary">Registrarse</button>
+        <button type="submit" class="btn btn-primary">{% trans "Registrarse" %}</button>
     </form>
 </div>
 {% endblock %}

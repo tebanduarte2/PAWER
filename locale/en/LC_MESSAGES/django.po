@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-14 01:11+0000\n"
+"POT-Creation-Date: 2025-05-14 03:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -87,7 +87,7 @@ msgstr "Minimum Size"
 msgid "Tamaño máximo"
 msgstr "Maximum Size"
 
-#: PetsAdoption/templates/catalog.html:28
+#: PetsAdoption/templates/catalog.html:28 templates/contact.html:15
 msgid "Buscar"
 msgstr "Search"
 
@@ -147,9 +147,90 @@ msgstr "Space required for the pet:"
 msgid "Descripción:"
 msgstr "Description:"
 
+#: PetsAdoption/templates/detail_pet.html:45
+msgid "Adóptame"
+msgstr "Adopt Me"
+
+#: Users/templates/login.html:6 Users/templates/login.html:17
+msgid "Iniciar Sesión"
+msgstr "Log In"
+
+#: Users/templates/login.html:10
+msgid "Usuario"
+msgstr "User"
+
+#: Users/templates/login.html:14
+msgid "Contraseña"
+msgstr "Password"
+
+#: Users/templates/signup.html:6 Users/templates/signup.html:38
+#: templates/base.html:34
+msgid "Registrarse"
+msgstr "Sign Up"
+
 #: templates/base.html:18
 msgid "Inicio"
 msgstr "Home"
+
+#: templates/base.html:19
+msgid "Adopción"
+msgstr "Adoption"
+
+#: templates/base.html:20
+msgid "Contacto"
+msgstr "Contact Us"
+
+#: templates/base.html:25
+msgid "Cerrar sesión"
+msgstr "Log Out"
+
+#: templates/base.html:33
+msgid "Iniciar sesión"
+msgstr "Log In"
+
+#: templates/contact.html:6
+msgid "Contáctanos"
+msgstr "Contact Us"
+
+#: templates/contact.html:10
+msgid "Puedes usar el buscador a continuación para encontrar direcciones:"
+msgstr "You can use the following search bar for finding addresses:"
+
+#: templates/contact.html:14
+msgid "Ingresa una dirección para buscar"
+msgstr "Type an address to search"
+
+#: templates/contact.html:20
+msgid "No se encontraron resultados para:"
+msgstr "No results found for:"
+
+#: templates/contact.html:22
+msgid "Resultado de la búsqueda para:"
+msgstr "Results for: "
+
+#: templates/contact.html:26
+msgid "Dirección:"
+msgstr "Description:"
+
+#: templates/contact.html:27
+msgid "Latitud:"
+msgstr "Latitude:"
+
+#: templates/contact.html:28
+msgid "Longitud:"
+msgstr "Longitude:"
+
+#: templates/contact.html:40
+msgid "Nuestra Información de Contacto"
+msgstr "Our Contact Information"
+
+#: templates/contact.html:41
+msgid "Correo electrónico: gmcalleh@eafit.edu.com"
+msgstr "Email: gmcalleh@eafit.edu.com"
+
+#: templates/contact.html:42
+msgid "Teléfono: 322 204 6804"
+msgstr "Phone: 322 204 6804"
 
 #: venv/lib/python3.13/site-packages/django/contrib/messages/apps.py:16
 msgid "Messages"

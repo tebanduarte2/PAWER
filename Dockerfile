@@ -19,4 +19,4 @@ RUN python manage.py collectstatic --noinput
 EXPOSE 80
 
 # Ejecuta la app con gunicorn (usa whitenoise para estáticos)
-CMD ["gunicorn", "Pawer.wsgi:application", "--bind", "0.0.0.0:8000"]
+CMD ["gunicorn", "Pawer.wsgi:application", "--bind", "0.0.0.0:80"]
